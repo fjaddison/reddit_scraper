@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <title>{% block title %}Learning Flask and Shite{% endblock %}</title>
+  <link rel='stylesheet' href='/static/style.css'>
+</head>
+<body>
+  {% block content %}{% endblock %}
+  
+  <div class='template-rect'>
+    <svg></svg>
+  </div>
+  {% block script %}{% endblock %}
+  <script src="https://d3js.org/d3.v6.js"></script>
+  <script>
+    const count = '{{ count|tojson }}'
+  </script>
+  <script type='text/javascript' src='/static/script.js'></script>
+</body>
+</html>
